@@ -1,0 +1,21 @@
+
+@mixin layout($flexstart:flex-start,$between:space-between){
+  display: flex;
+  align-items: $flexstart;
+  justify-content: $between;
+  @content;
+};
+
+@mixin width{
+  margin : 0 auto;
+};
+
+@mixin border{
+  border : 1px solid #aaa;
+};
+
+@mixin widHei{
+  width : 36px;
+  height: 36px;
+  border-radius: 50%;
+}

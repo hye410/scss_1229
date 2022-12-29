@@ -1,0 +1,218 @@
+// @use  : 조건적으로 필요한 부분만 가져오고 싶을 때 (변수체계라든지,,,)
+// @use '경로' as 이름  (이 이름들만 가지고 올거야) 
+// @use '경로' as *   (전체 다 가지고 올거야)
+// 최상위에 들어가야함.
+// @import : 파일 전체를 가지고 올 때 사용
+// 파일 이름 앞에 _가 있는건 참조 파일이라는 뜻. 연결할 땐 _ 빼고 연결하면 됨
+
+@use './variable.scss' as * ;
+@import './mixin';
+@import './common.scss';
+
+// header
+
+header{
+  padding : 70px 0 25px;
+  background-color: $back;
+  position:relative;
+  .bottom{
+    width : $content;
+    @include width;
+    h1{
+      margin-bottom: 35px;
+      text-align: center;
+    }
+  }
+  .top{
+    width : $full;
+    position:absolute;
+    left:0;
+    top:0;
+    @include border;
+    p{
+      width : $content;
+      @include width;
+      a{
+        color : $sub;
+        font-size: $small;
+        line-height: $source * 4;
+      }
+    }
+  }
+}
+
+// nav
+
+nav{
+  @include layout($between:center);
+    ul{
+      @include layout;          
+        li{
+          margin : 0 25px;
+          padding-bottom : $source;
+          position:relative;
+          span{
+            display: block;
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:$full;
+            height: 2px;
+            background-color: transparent;
+          }
+          &:hover{
+            span{
+              background-color: $main;
+            }
+          }
+          a{
+            color : $main;
+            font : {
+              size : $normal;
+              weight : bold;
+            }
+          }
+        }
+      }
+    }
+  
+  .button{
+    i{
+      color : $main;
+      font-size: $source;
+    }
+  }
+
+
+// main
+
+article{
+  width : $content;
+  @include width;
+  padding : 80px 0;
+  h3{
+    font:{
+      size : $large;
+      weight : bold;
+    };
+    text-align: center;
+    color : $black;
+    letter-spacing: $source;
+    margin-bottom : $source * 7;
+  }
+   >div.btn{
+    margin-bottom : 34px;
+    @include layout($flexstart:center);
+    p{
+      font-size: $normal;
+      color : $sub;
+    }
+    div{
+      width:190px;
+      padding: 15px 0 15px;
+      border-radius: 18px;
+      position: relative;
+      font-size: $normal;
+      @include border;
+      p{
+        text-indent: $source * 3;
+        color : $main;
+      }
+      ul{
+        position:absolute;
+        width : 130px;
+        top : 44px;
+        left : $source * 3;
+        z-index: 10;
+        text-align: center;
+        display: none;
+        li{
+          line-height: 25px;
+          color:$main;
+          @include border;
+        }
+      }
+    }
+  }
+  div.gallery{
+    width : $content;
+    @include width;
+    @include layout;
+    flex-wrap:wrap;
+      figure{
+        width: 270px;
+        margin-bottom : $large;
+        padding-bottom: $source;
+        position:relative;
+
+        .title{
+          font : {
+          size: $normal;
+          font-weight: bold;
+          };
+          margin-bottom:$source;
+          text-align: center;
+        }
+
+        .price{
+          text-align: center;
+          margin-bottom: $source * 2;
+          ins{
+            color : $red;
+            font-size: $normal;
+          }
+          del{
+            color : $sub;
+            font-size: $normal;
+          }
+        }
+
+        .btn{
+          @include layout;
+          .add{
+            width:130px;
+            height: 36px;
+            color:$sub;
+            border-radius: 18px;
+            @include border;
+          }
+          .link{
+            color:$sub;
+            @include border;
+            @include widHei;
+          }
+          .fav{
+            color:$sub;
+            @include border;
+            @include widHei;
+          }
+        }
+        
+        .label{
+          position:absolute;
+          right:$source;
+          bottom : 150px;
+          b{
+            color:$white;
+            display: block;
+            background-color: $red;
+            line-height: 36px;
+            font-size: $normal;
+            text-align: center;            
+            @include widHei;
+            @include border;
+          }
+        }
+        
+        img{
+          margin-bottom: $source;
+        }
+
+        figcaption{
+          font-size: $normal;
+          margin-bottom : 23px;
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCSS LAYOUT</title>
+  <link rel="stylesheet" href="./scss/reset.scss">
+  <link rel="stylesheet" href="./scss/main.scss">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <div class="bottom">
+        <h1><a href="#"><img src="./images/logo2.png" alt="로고"></a></h1>
+        <!-- nav -->
+        <nav>
+          <h2 class="hide">메인내비게이션</h2>
+          <ul>
+            <li><a href="#">HOME</a>
+            <span></span>
+          </li>
+            <li><a href="#">SHOP</a>
+            <span></span>
+          </li>
+            <li><a href="#">PORTFOLIO</a>
+            <span></span>
+          </li>
+            <li><a href="#">BLOG</a>
+            <span></span>
+          </li>
+            <li><a href="#">PAGES</a>
+            <span></span>
+          </li>
+            <li><a href="#">CONTACT</a>
+            <span></span>
+          </li>
+          </ul>
+          <p class="button"><i class="fa-solid fa-magnifying-glass"></i></p>
+        </nav>
+      </div>
+      <div class="top">
+        <p><a href="#">WELCOME GUEST! LOG IN OR REGISTER</a></p>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <article>
+        <h3>SHOP</h3>
+        <div class="btn">
+          <p>
+            SHOWING <b>1</b>&#45;<b>12</b> OF <b>100</b> RESULTS
+          </p>
+          <div>
+            <p>DEFAULT SORTING <i class="fa-solid fa-chevron-down"></i></p>
+            <ul> <!--li 첫번째 감싸고 있는 테두리-->
+              <li>DEFAULT SORTING</li> <!--li첫번째 자식 제외하고 display : none-->
+              <li>Sort01</li>
+              <li>Sort02</li>
+              <li>Sort03</li>
+              <li>Sort04</li>
+              <li>Sort05</li>
+            </ul>
+          </div>
+          <!-- input>datalist -->
+          <!-- select -->
+        </div>
+        <div class="gallery">
+          <!-- 1 -->
+          <figure>
+            <img src="./images/product-img-2.jpg" alt="COAT WITH WOOL WRAPAROUND COLLAR">
+            <figcaption>
+              <dl>
+                <dt class="title">COAT WITH WOOL WRAPAROUND COLLAR</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button type="button" class="add">ADD TO CART</button>
+                  <div>
+                    <button type="button" class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button type="button" class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-25%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 2 -->
+          <figure>
+            <img src="./images/product-img-3.jpg" alt="UTILITY JACKET">
+            <figcaption>
+              <dl>
+                <dt class="title">UTILITY JACKET</dt>
+                <dd class="price">
+                  189.99 USD                
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 3 -->
+          <figure>
+            <img src="./images/product-img-4.jpg" alt="ANIMAL PRINT COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">ANIMAL PRINT COAT</dt>
+                <dd class="price">
+                  189.99 USD
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 4 -->          
+          <figure>
+            <img src="./images/product-img-12.jpg" alt="ANIMAL PRINT COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">ANIMAL PRINT COAT</dt>
+                <dd class="price">
+                  189.99 USD
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 5 -->   
+          <figure>
+            <img src="./images/product-img-6.jpg" alt="STRUCTURED COLLARLESS COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">STRUCTURED COLLARLESS COAT</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-50%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 6 -->      
+          <figure>
+            <img src="./images/product-img-7.jpg" alt="HOUNDSTOOTH WOOL COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">HOUNDSTOOTH WOOL COAT</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-15%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 7 -->  
+          <figure>
+            <img src="./images/product-img-8.jpg" alt="HOUNDSTOOTH WOOL COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">HOUNDSTOOTH WOOL COAT</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-25%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 8 -->    
+          <figure>
+            <img src="./images/product-img-12.jpg" alt="COAT WITH WOOL WRAPAROUND COLLAR">
+            <figcaption>
+              <dl>
+                <dt class="title">COAT WITH WOOL WRAPAROUND COLLAR</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-25%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 9 -->      
+          <figure>
+            <img src="./images/Image.png" alt="STRUCTURED COLLARLESS COAT">
+            <figcaption>
+              <dl>
+                <dt class="title">STRUCTURED COLLARLESS COAT</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-50%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 10 -->      
+          <figure>
+            <img src="./images/Image-1.png" alt="HOUNDSTOOTH WOOL COAT">
+            <figcaption>
+              <dl>
+                <dt class="title"t>HOUNDSTOOTH WOOL COAT</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-15%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 11 -->      
+          <figure>
+            <img src="./images/Image-2.png" alt="COAT WITH WOOL WRAPAROUND COLLAR">
+            <figcaption>
+              <dl>
+                <dt class="title">COAT WITH WOOL WRAPAROUND COLLAR</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-25%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+          <!-- 12 -->      
+          <figure>
+            <img src="./images/product-img-5.jpg" alt="COAT WITH WOOL WRAPAROUND COLLAR">
+            <figcaption>
+              <dl>
+                <dt class="title"t>COAT WITH WOOL WRAPAROUND COLLAR</dt>
+                <dd class="price">
+                  <ins>100.99 USD</ins>
+                  <del>189.99 USD</del>
+                </dd>
+                <dd class="btn">
+                  <button class="add">ADD TO CART</button>
+                  <div>
+                    <button class="link"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="fav"><i class="fa-regular fa-heart"></i></button>
+                 </div>
+                </dd>
+                <dd class="label">
+                  <b>-25%</b>
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>                                                          
+        </div>
+      </article>
+    </main>
+      <!-- aside -->
+    <div id="bottom">    
+      <aside>
+        <!--  -->
+        <dl>
+          <dt>
+            <span>LOCATION</span>            
+          </dt>
+          <dd>
+            <address>580, BROADWAY, 10012 &#45; NEW YORK<br>
+              NY &#45; U</address>
+           </dd>
+          <dd>
+            <a href="tel:+1 2123431725">Tel. +1 2123431725</a>
+          </dd>
+          <dd>
+            <a href="malito:nfo@thememove.com">Email. info&#64;thememove.com</a>
+          </dd>
+        </dl>
+        <!--  -->
+        <dl>
+          <dt>
+            <span>HELP</span>            
+          </dt>
+          <dd><a href="#">HOW TO BUY</a></dd>
+          <dd><a href="#">GENERAL INFORMATION</a></dd>
+          <dd><a href="#">PAYMENT</a></dd>
+          <dd><a href="#">SHIPPING</a></dd>
+          <dd><a href="#">RETURNS</a></dd>
+          <dd><a href="#">EXCHANGES</a></dd>
+          <dd><a href="#">GIFT CARD</a></dd>
+          <dd><a href="#">MY ACCOUNT</a></dd>
+          <dd><a href="#">WATCHES</a></dd>
+        </dl>
+        <!--  -->
+        <dl>
+          <dt>
+            <span>POLICIES</span>            
+          </dt>
+          <dd><a href="#">ENVIRONMENTAL POLICY</a></dd>
+          <dd><a href="#">ANIMAL WELFARE</a></dd>
+          <dd><a href="#">PRIVACY POLICY</a></dd>
+          <dd><a href="#">PURCHASE CONDITIONS</a></dd>
+          <dd><a href="#">GIFT CARD CONDITIONS</a></dd>
+          <dd><a href="#">WARRANTY ON WATCHES</a></dd>
+        </dl>
+        <!--  -->
+        <dl>
+          <dt>
+            <span>COMPANY</span>            
+          </dt>
+          <dd><a href="#">ABOUT US</a></dd>
+          <dd><a href="#">OFFICES</a></dd>
+          <dd><a href="#">STORES</a></dd>
+          <dd><a href="#">WORK WITH US</a></dd>
+          <dd><a href="#">CONTACT</a></dd>
+        </dl>
+      </aside>
+      <!-- footer -->
+      <footer>
+        <ul>
+          <li><a href="#"><img src="./images/visa.png" alt="카드1"></a></li>
+          <li><a href="#"><img src="./images/paypal.png" alt="카드2"></a></li>
+          <li><a href="#"><img src="./images/2co.png" alt="카드3"></a></li>
+          <li><a href="#"><img src="./images/ae.png" alt="카드4"></a></li>
+          <li><a href="#"><img src="./images/skrill.png" alt="카드5"></a></li>
+          <li><a href="#"><img src="./images/gw.png" alt="카드6"></a></li>
+          <li><a href="#"><img src="./images/wu.png" alt="카드7"></a></li>
+        </ul>
+        <small>&copy;COPYRIGHT 2022.THEME MADE BY THEMEMOVE</small>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
